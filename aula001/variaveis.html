@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variaveis.css">
+    <title>Variaveis</title>
+</head>
+<body>
+    <h1>VARIAVEIS</h1>
+        <P>
+            Imagine variáveis como uma gaveta nos quais você pode armazenar certas informações (meias, cuecas, cinto...), estas coisas são chamadas de valores das variaveis. Cada gaveta deve ter seu próprio nome, pelo qual poderemos indicá-lo claramente.
+        </P>
+        <p>
+            Temos somos livres quando se trata de escolher esses nomes, mas devemos sempre escolhe-los com base no qe vamos armazenar. Por exemplo. se vamos criar uma variavel o gaveta para guardar meias então esse deve ser o nome da nossa variavel. 
+        </p>
+        <p>
+            Em outras linguagens de programação, uma variável deve ser declarada antes do uso, e JavaScript não é exceção. Declarar uma variável é simplesmente "reservar" o nome da variável. Dessa forma, informamos ao programa que na parte posterior da execução, usaremos esse nome para nos referir a nossa gaveta, a fim de recuperar um valor dele, ou guardar um valor nele.
+        </p>
+        <p>
+            Os nomes de variáveis em JavaScript podem ser qualquer sequência de caracteres. Mas há um conjunto de <strong>palavras reservadas</strong> que não podem ser usadas para nomear variáveis, funções ou qualquer outra coisa. Elas são partes integrais da linguagem e recebem significados que não podem ser alterados. <br> Confira a lista abaixo das palavras reservadas:
+        </p>
+        <table>
+            <tr>
+                <td>abstract</td>
+                <td>arguments</td>
+                <td>await</td>
+            </tr>
+            <tr>
+                <td>boolean</td>
+                <td>break</td>
+                <td>byte</td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>case</td>
+                <td>catch</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>break</td>
+                <td>const</td>
+            </tr>
+            <tr>
+                <td>continue</td>
+                <td>debugger</td>
+                <td>default</td>
+            </tr>
+            <tr>
+                <td>delete</td>
+                <td>do</td>
+                <td>double</td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>enum</td>
+                <td>eval</td>
+            </tr>
+            <tr>
+                <td>export</td>
+                <td>extends</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>final</td>
+                <td>finally</td>
+                <td>float</td>
+            </tr>
+            <tr>
+                <td>for</td>
+                <td>function</td>
+                <td>goto</td>
+            </tr>
+            <tr>
+                <td>implements</td>
+                <td>if</td>
+                <td>import</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>instanceof</td>
+                <td>int</td>
+            </tr>
+            <tr>
+                <td>interface</td>
+                <td>let</td>
+                <td>native</td>
+            </tr>
+            <tr>
+                <td>new</td>
+                <td>null</td>
+                <td>package</td>
+            </tr>
+            <tr>
+                <td>private</td>
+                <td>protected</td>
+                <td>public</td>
+            </tr>
+            <tr>
+                <td>return</td>
+                <td>short</td>
+                <td>static</td>
+            </tr>           			              	    	    	   	    	    	
+            <tr>
+                <td>super</td>
+                <td>switch</td>
+                <td>this</td>
+            </tr>
+            <tr>
+                <td>synchronized</td>
+                <td>throw</td>
+                <td>throws</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>transient</td>
+                <td>try</td>
+            </tr>
+            <tr>
+                <td>typeof</td>
+                <td>var</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>volatile</td>
+                <td>while</td>
+                <td>with</td>
+            </tr>
+            <tr>
+                <td>yield</td>
+            </tr>	         		    	
+        </table>
+        <p>
+            Em JavaScript, os nomes das variáveis podem ser qualquer sequência de letras minúsculas e maiúsculas, dígitos, caracteres de sublinhado e cifrões, mas não devem começar com um dígito. <br> <strong>NOTA: </strong> O interpretador JavaScript distingue entre letras maiúsculas e minúsculas, também em nomes de variáveis, nomes como: teste,Teste, ou TESTE serão tratados como diferentes.
+        </p>
+    <h2>Declarar variáveis</h2>
+        <p>
+            Para as declarações, usamos as palavras reservadas ou palavras-chave <strong> var </strong> ou <strong> let </strong> para variáveis e <strong> const </strong> para constantes.
+        </p>
+        <p>Execute o Codigo abaixo</p>
+<pre>
+    <code>
+        var height;
+        console.log(height);
+    </code>
+</pre>
+        <p>
+            A cima declaramos uma variavel com a palavra reservada ou chave <strong>var</strong> e o <strong> height </strong> é o nome da variavel. A declaração, como outras instruções JavaScript, deve terminar com um ponto e vírgula <br>Resultado:
+        </p>
+<pre>
+    <code>
+        console.log(height);  //  ->  undefined (indefenido)
+        console.log(weight);  //  ->  Uncaught  ReferenceError:  weight  is  not  defined (weight não foi definido)
+    </code>
+</pre>
+        <p>
+            Como ainda não colocamos nada lá, o interpretador conhece esta variável, mas ela ainda não tem valor – o valor é indefinido. <br>Na próxima linha, tentamos imprimir o conteúdo da variável weight ... que esquecemos de declarar. Desta vez, veremos Erro de referência. O interpretador JavaScript, nos informou que não conhece uma variável com esse nome (portanto, a variável em si é indefinida).
+        </p>
+    <h2>Var & Let </h2>
+        <p>
+            A palavra-chave var vem da sintaxe original do JavaScript e da palavra-chave let foi introduzido muito mais tarde. Portanto, você encontrará var mais em programas mais antigos. Atualmente, é altamente recomendável usar a palavra let.
+        </p>
+        <p>
+            Uma das diferenças básicas no uso de <strong>var</strong> e <strong>let</strong> é que let nos impede de declarar outra variável com o mesmo nome (um erro é gerado). Usar var permite que você redeclare uma variável, o que pode potencialmente levar a erros na execução do programa.
+        </p>
+<pre>
+    <code>
+        var height;
+        var height;
+        console.log(height); // -> undefined
+    </code>
+</pre>
+<pre>
+    <code>
+        let height;
+        let height; // -> Uncaught SyntaxError: Identifier 'height' has already been declared
+        console.log(height);
+    </code>
+</pre>
+    <h2>Inicializando variáveis</h2>
+        <p>
+            A inicialização pode ser feita junto com a declaração ou separadamente como um comando independente. É importante inserir o primeiro valor na variável antes de tentar lê-la, modificá-la ou exibi-la.
+        </p>
+<pre>
+    <code>
+        let  height  =  180;
+        let  anotherHeight  =  height;
+        let  weight;
+        console.log(height);  //  ->  180
+        console.log(anotherHeight);  //  ->  180
+        weight  =  70;    
+        console.log(weight);  //  ->  70                    
+    </code>
+</pre>
+        <p>
+            A propósito, preste atenção em uma coisa. Se você especificar um nome de variável em console.log, o interpretador o reconhecerá e exibirá seu valor. Se você colocar o mesmo nome entre aspas, ele será tratado como texto simples e exibido como tal.
+        </p>
+<pre>
+    <code>
+        let  height  =  180;
+        console.log(height);  //  ->  180
+        console.log("height");  //  ->  height
+    </code>
+</pre>
+    <h2>Declarações e modo estrito</h2>
+        <p>Veja o exemplo abaixo</p>
+<pre>
+    <code>
+        height  =  180;
+        console.log(height);  //  ->  180
+    </code>
+</pre>
+        <p>
+            À primeira vista, você pode ver que esquecemos de declarar a variável height. O JavaScript permitia tal negligência. Mas infelizmente às vezes pode levar a situações ambíguas e potencialmente errôneas.
+        </p>
+<pre>
+    <code>
+        "use  strict";
+        height  =  180;  //  ->  Uncaught  ReferenceError:  height  is  not  defined
+        console.log(height);
+    </code>
+</pre>
+    <script src="variaveis.js"></script>
+    <h2>Alterando valores de variáveis</h2>
+        <p>
+            Variáveis, como o próprio nome sugere, podem armazenar dados que irão variar. As alterações são feitas atribuindo um novo valor à variável, que sobrescreve o anterior
+        </p>
+<pre>
+    <code>
+        let  steps  =  100;
+        console.log(steps);  //  ->  100
+        steps  =  120;  //  ->  120
+        console.log(steps);
+        steps  =  steps  +  200;
+        console.log(steps);  //  ->  320
+    </code>
+</pre>
+    <h2>Const</h2>
+    <p>
+        O <strong>const</strong> palavra-chave é usada para declarar a variáveis
+    </p>
+
+</body>
+</html>
